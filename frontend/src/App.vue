@@ -44,7 +44,8 @@ export default {
   <div class="container">
     <h1>Todo List</h1>
     <ul>
-      <li v-for="(todoElem, ind) in todoList" :key="ind" :class="{ 'completed': todoElem.completed }">
+      <li v-for="(todoElem, ind) in todoList" :key="ind" :class="{ 'completed': todoElem.completed }"
+        @click="todoElem.completed = !todoElem.completed">
         <a href="#"> {{ todoElem.text }} </a>
       </li>
     </ul>
